@@ -5,6 +5,7 @@
 !.swift-version
 !.swiftlint.yml
 !project.yml
+!README.md
 
 !Packages/
 !Packages/SalesDebriefCore/
