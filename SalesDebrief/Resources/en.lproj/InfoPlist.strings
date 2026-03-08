@@ -1,0 +1,2 @@
+"NSMicrophoneUsageDescription" = "This app needs microphone access to record a post-visit voice note.";
+"NSSpeechRecognitionUsageDescription" = "This app needs speech recognition to turn your voice note into a visit note.";

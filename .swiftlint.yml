@@ -1,0 +1,21 @@
+included:
+  - SalesDebrief
+  - SalesDebriefTests
+  - SalesDebriefUITests
+  - Packages/SalesDebriefCore/Sources
+  - Packages/SalesDebriefCore/Tests
+
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - first_where
+  - sorted_imports
+
+line_length:
+  warning: 140
+  error: 180
+
+disabled_rules:
+  - trailing_comma
+
+reporter: "xcode"

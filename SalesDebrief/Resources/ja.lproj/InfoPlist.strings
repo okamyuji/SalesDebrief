@@ -1,0 +1,2 @@
+"NSMicrophoneUsageDescription" = "訪問後の音声メモを録音するためにマイクを使用します。";
+"NSSpeechRecognitionUsageDescription" = "音声メモを訪問メモに変換するために音声認識を使用します。";

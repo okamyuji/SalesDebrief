@@ -1,0 +1,68 @@
+name: SalesDebrief
+options:
+  bundleIdPrefix: com.yujiokamoto
+packages:
+  SalesDebriefCore:
+    path: Packages/SalesDebriefCore
+settings:
+  SWIFT_VERSION: 6.0
+targets:
+  SalesDebrief:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - SalesDebrief
+    resources:
+      - SalesDebrief/Resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yujiokamoto.SalesDebrief
+        INFOPLIST_FILE: SalesDebrief/Supporting/Info.plist
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        TARGETED_DEVICE_FAMILY: 1
+        DEVELOPMENT_ASSET_PATHS: ""
+    dependencies:
+      - package: SalesDebriefCore
+      - sdk: AVFoundation.framework
+      - sdk: Speech.framework
+      - sdk: StoreKit.framework
+      - sdk: SwiftData.framework
+  SalesDebriefTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - SalesDebriefTests
+    dependencies:
+      - target: SalesDebrief
+      - package: SalesDebriefCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yujiokamoto.SalesDebriefTests
+        GENERATE_INFOPLIST_FILE: YES
+  SalesDebriefUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - SalesDebriefUITests
+    dependencies:
+      - target: SalesDebrief
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yujiokamoto.SalesDebriefUITests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  SalesDebrief:
+    build:
+      targets:
+        SalesDebrief: all
+        SalesDebriefTests: [test]
+        SalesDebriefUITests: [test]
+    test:
+      gatherCoverageData: true
+      targets:
+        - SalesDebriefTests
+        - SalesDebriefUITests
